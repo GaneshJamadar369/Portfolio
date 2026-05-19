@@ -17,8 +17,8 @@
 
 /* ── Section Headings ── */
 .career-section h2 {
-  font-size: 64px;
-  line-height: 64px;
+  font-size: var(--text-2xl);
+  line-height: 1.1;
   font-weight: 400;
   text-align: left;
   background: linear-gradient(135deg, #ffffff 40%, #14b8a6 100%);
@@ -161,9 +161,9 @@
 .career-card-number {
   font-size: 11px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
   letter-spacing: 2px;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Mono", monospace;
   transition: color 0.3s ease;
 }
 
@@ -232,7 +232,7 @@
 .career-card-date {
   font-size: 12px;
   font-weight: 500;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Mono", monospace;
   color: rgba(255, 255, 255, 0.3);
   white-space: nowrap;
   padding: 4px 10px;

@@ -16,8 +16,8 @@ const About = () => {
         <br />
         <h3 className="title">Leadership & Awards</h3>
         <ul className="about-awards">
-          <li>VSM Scholar — full academic sponsorship</li>
-          <li>1st Place — VSM Hackathon 2026</li>
+          <li className="award-gold">VSM Scholar — full academic sponsorship</li>
+          <li className="award-gold">1st Place — VSM Hackathon 2026</li>
           <li>Drama Club Head at GCOEC</li>
           <li>Volunteer, Nilgiri House IITM</li>
         </ul>

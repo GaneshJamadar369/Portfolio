@@ -16,19 +16,20 @@
   max-width: calc(100% - 15px);
 }
 .about-me h3 {
-  font-size: 25px;
+  font-size: var(--text-sm);
   text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
+  letter-spacing: 0.14em;
+  font-weight: 500;
   color: var(--accentColor);
+  margin-bottom: 20px;
 }
 
 .about-me p {
-  font-size: 33px;
-  font-weight: 500;
-  line-height: 38px;
-  letter-spacing: 0.3px;
-  color: rgba(255, 255, 255, 0.92);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
 }
 
 .about-awards {
@@ -55,6 +56,13 @@
   left: 0;
   color: var(--accentColor);
   font-weight: 300;
+}
+
+.about-awards li.award-gold::before {
+  content: "◆";
+  color: var(--gold);
+  font-size: 10px;
+  top: 4px;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -92,8 +100,8 @@
     width: 50%;
   }
   .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.4vw;
+    font-size: 1.15vw;
+    line-height: 1.8;
   }
   .about-me {
     padding-bottom: 160px;
@@ -101,7 +109,7 @@
 }
 @media only screen and (min-width: 1950px) {
   .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
   }
 }

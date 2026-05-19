@@ -8,8 +8,9 @@
 }
 
 .contact-section h3 {
-  font-size: 60px;
+  font-size: var(--text-2xl);
   font-weight: 400;
+  line-height: 1.1;
   text-transform: uppercase;
   margin: 0;
 }
