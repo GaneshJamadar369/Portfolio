@@ -2,6 +2,8 @@ import * as THREE from "three";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 let intensityInterval: ReturnType<typeof setInterval> | null = null;
 
 export function setCharTimeline(
