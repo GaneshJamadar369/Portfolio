@@ -1,0 +1,330 @@
+.career-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  margin: auto;
+  margin-bottom: 80px;
+  padding: 80px 0;
+}
+
+.career-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ── Section Headings ── */
+.career-section h2 {
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+  text-align: left;
+  background: linear-gradient(135deg, #ffffff 40%, #14b8a6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-top: 20px;
+  margin-bottom: 48px;
+}
+
+.career-section h2 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ── Cards Container ── */
+.career-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  margin-left: 20px;
+}
+
+/* ── Corner Brackets (same style as What I Do) ── */
+.career-card::before,
+.career-corner::before,
+.career-card::after,
+.career-corner::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  transition: border-color 0.3s ease;
+  z-index: 2;
+}
+
+.career-card:hover::before,
+.career-card:hover .career-corner::before,
+.career-card:hover::after,
+.career-card:hover .career-corner::after {
+  border-color: #14b8a6;
+}
+
+/* Top-left corner */
+.career-card::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-left corner */
+.career-card::after {
+  bottom: -1px;
+  left: -1px;
+  border-top: none;
+  border-right: none;
+}
+
+/* Top-right corner */
+.career-corner::before {
+  top: -1px;
+  right: -1px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom-right corner */
+.career-corner::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.career-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Dashed top border line */
+.career-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Individual Card ── */
+.career-card {
+  display: flex;
+  gap: 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.4s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.career-card-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #14b8a6, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.career-card:hover {
+  background: rgba(20, 184, 166, 0.04);
+}
+
+.career-card:hover::before {
+  opacity: 1;
+}
+
+/* ── Left Number Column ── */
+.career-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 28px 30px 20px;
+  gap: 12px;
+  min-width: 60px;
+}
+
+.career-card-number {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 2px;
+  font-family: "Geist", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.career-card:hover .career-card-number {
+  color: #14b8a6;
+}
+
+.career-card-bar {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(20, 184, 166, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  min-height: 10px;
+}
+
+.career-card:hover .career-card-bar {
+  opacity: 1;
+}
+
+/* ── Card Content ── */
+.career-card-content {
+  flex: 1;
+  padding: 30px 30px 30px 0;
+}
+
+/* ── Header row (always visible) ── */
+.career-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.career-card-title-group {
+  flex: 1;
+}
+
+.career-card-title-group h4 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.career-card:hover .career-card-title-group h4 {
+  color: #e2faf8;
+}
+
+.career-card-title-group h5 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 5px 0 0;
+  color: #14b8a6;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.career-card:hover .career-card-title-group h5 {
+  opacity: 1;
+}
+
+.career-card-date {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Geist", sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+}
+
+.career-card:hover .career-card-date {
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.4);
+  background: rgba(20, 184, 166, 0.1);
+}
+
+/* ── Reveal panel (hidden until hover) ── */
+.career-card-reveal {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.career-card:hover .career-card-reveal {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.career-card-reveal p {
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 16px 0 20px;
+  max-width: 680px;
+}
+
+.career-card-line {
+  width: 40px;
+  height: 1px;
+  background: #14b8a6;
+  margin-bottom: 4px;
+  opacity: 0.6;
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 1025px) {
+  .career-section {
+    padding: 50px 0;
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .career-section h2 {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .career-card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .career-card-date {
+    align-self: flex-start;
+  }
+
+  .career-card-title-group h4 {
+    font-size: 17px;
+  }
+
+  .career-container {
+    max-width: calc(100% - 40px);
+  }
+
+  .career-cards {
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .career-section h2 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .career-card-left {
+    padding: 20px 14px 20px 10px;
+    min-width: 40px;
+  }
+}
