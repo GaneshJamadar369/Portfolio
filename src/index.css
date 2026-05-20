@@ -134,6 +134,14 @@ body {
   margin-bottom: -100px;
 }
 
+.tech-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
 .techstack h2 {
   font-size: 80px;
   text-align: center;
@@ -159,7 +167,13 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .techstack {
+    height: 70svh;
+    margin-bottom: -60px;
+  }
   .techstack h2 {
-    font-size: 40px;
+    font-size: 36px;
+    top: 60px;
+    letter-spacing: 2px;
   }
 }
